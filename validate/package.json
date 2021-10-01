@@ -1,0 +1,25 @@
+{
+  "name": "schema-validator",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "./node_modules/.bin/mocha --recursive",
+    "debug": "node --inspect-brk=0.0.0.0 index.js",
+    "start": "node index.js"
+  },
+  "author": "Marc Despland",
+  "license": "Apache-2.0",
+  "dependencies": {
+    "ajv": "^6.12.2",
+    "axios": "^0.21.1",
+    "json-schema-parser": "^0.1.0",
+    "nanoid": "^3.1.20",
+    "yargs": "^15.3.1"
+  },
+  "devDependencies": {
+    "chai": "^4.2.0",
+    "chai-as-promised": "^7.1.1",
+    "mocha": "7.1.1"
+  }
+}

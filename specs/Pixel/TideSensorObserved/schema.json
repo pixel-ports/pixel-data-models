@@ -1,0 +1,79 @@
+{
+  "$id": "https://gitpixel.satrdlab.upv.es/marc.despland/DataModels/src/master/DataModels/tidesensorobserved.schema.json",
+  "$schema": "http://json-schema.org/schema#",
+  "title": "TideSensorObserved",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier : urn:ngsi:TideSensorObserved:sensorname:date"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "TideSensorObserved"
+          ],
+          "description": "value is TideSensorObserved"
+        },
+        "dataProvider": {
+          "type": "string",
+          "description": "Specifies the URL to information about the provider of this information"
+        },
+        "source": {
+          "type": "string",
+          "description": "The urn of the PIXEL data source"
+        },
+        "dateModified": {
+          "type": "string",
+          "format": "date-time",
+          "description": "AUTO The date of the last modification - managed by ORION"
+        },
+        "dateCreated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "AUTO The date of the creation of teh entity - managed by ORION"
+        },
+        "observed": {
+          "type": "string",
+          "format": "date-time",
+          "description": "date of the observation"
+        },
+        "name": {
+          "type": "string",
+          "description": "The ship name"
+        },
+        "location": {
+          "$ref": "http://geojson.org/schema/Geometry.json#",
+          "description": "The geo:json location of the data"
+        },
+        "water_height": {
+          "type": "integer",
+          "description": "Water height measure by sensor"
+        },
+        "water_trend": {
+          "type": "string",
+          "enum": [
+            "down",
+            "up",
+            "stall"
+          ],
+          "description": "The trend of the water height"
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type",
+    "dataProvider",
+    "source",
+    "location",
+    "water_height",
+    "water_trend"
+  ]
+}

@@ -1,0 +1,29 @@
+
+{
+  "id": "CHE-ITMNF-demand-forklift",
+  "type": "ThreePhaseAcMeasurement",
+  "source": {
+    "value": "urn:pixel:DataSource:Energy:ThreePhaseAcMeasurement",
+    "type": "Text"
+  },
+  "location": {
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        45.784792,
+        13.557173
+      ]
+    },
+    "type": "geo:json"
+  },
+  "dateObservedFrom": {
+    "value": "2021-07-01T00:00:00Z",
+    "type": "DateTime"
+  },
+  "dateObservedTo": {
+    "value": "2021-07-31T23:59:00Z",
+    "type": "DateTime"
+  },
+  "description": "Energy that the sum of all CHE Forklifts would demand in Monfalcone",
+  "totalActivePower": 31700.269531
+}

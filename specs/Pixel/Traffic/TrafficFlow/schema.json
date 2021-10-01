@@ -1,0 +1,48 @@
+{
+	"$id": "TrafficFlow-schema",
+	"$schema": "http://json-schema.org/schema#",
+	"title": "TrafficFlow",
+	"type": "object",
+	"allOf": [{
+			"$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+		}, {
+			"properties": {
+				"type": {
+					"type": "string",
+                    "enum": [
+                        "TrafficFlow"
+                     ],
+                     "description": "Entity to send complex data to ORION"
+				},
+				"MAP_VERSION": {
+					"type": "string"
+				},
+				"CREATED_TIMESTAMP": {
+					"type": "string"
+				},
+				"VERSION": {
+					"type": "string"
+				},
+				"TimeStampUTC": {
+					"type": "string",
+          			"format": "date-time"
+				},
+				"trafficflowdata": {
+					"type": "array",
+					"items": {
+						"type": "object"
+					}
+				}
+			}
+		}
+	],
+    "required": [
+        "id",
+        "type",
+        "MAP_VERSION",
+        "CREATED_TIMESTAMP",
+        "VERSION",
+        "TimeStampUTC",
+        "trafficflowdata"
+    ]
+}

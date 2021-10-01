@@ -1,0 +1,50 @@
+{
+  "id": "FRBAS-MarpolTerminalWaste-FRBAS-202010",
+  "type": "MarpolTerminalWaste",
+  "dataProvider": {
+    "value": "PROJET PIXEL GPMB TONNAGES DECHETS BASSENS OCTOBRE 2020.xlsx",
+    "type": "Text"
+  },
+  "source": {
+    "value": "urn:pixel:DataSource:frbod:VIGIEsip",
+    "type": "Text"
+  },
+  "locode": {
+    "value": "FRBAS",
+    "type": "Text"
+  },
+  "dateObservedFrom": {
+    "value": "2020-10-01T00:00:00Z",
+    "type": "DateTime"
+  },
+  "dateObservedTo": {
+    "value": "2020-11-01T00:00:00Z",
+    "type": "DateTime"
+  },
+  "location": {
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        -0.516238,
+        44.899835
+      ]
+    },
+    "type": "geo:json"
+  },
+  "domesticWaste": {
+    "value": 5.831000000000004,
+    "type": "Float"
+  },
+  "recyclableWaste": {
+    "value": 6.416000000000003,
+    "type": "Float"
+  },
+  "hazardousWaste": {
+    "value": 0.104,
+    "type": "Float"
+  },
+  "totalWaste": {
+    "value": 12.351000000000006,
+    "type": "Float"
+  }
+}

@@ -1,0 +1,79 @@
+{
+  "id": "GPMB-AmbientObserved-2020-02-25T09:00:00",
+  "type": "AirQualityObserved",
+  "source": {
+    "value": "urn:pixel:DataSource:frbod:AtmoNouvelleAquitaine",
+    "type": "Text"
+  },
+  "dataProvider": {
+    "value": "/home/fieb7512/dev/pixel/orange/atmo-ngsi/atmongsi/tests/station_bassens_2.csv",
+    "type": "URL"
+  },
+  "address": {
+    "value": "11 rue Paul Bert - 33530 BASSENS",
+    "type": "PostalAddress"
+  },
+  "location": {
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        -0.51584,
+        44.9003
+      ]
+    },
+    "type": "geo:json"
+  },
+  "refDevice": {
+    "value": "station-atmo-31007",
+    "type": "Text"
+  },
+  "dateObserved": {
+    "value": "2020-02-25T09:00:00",
+    "type": "Text"
+  },
+  "NO2": {
+    "value": 27,
+    "type": "Integer",
+    "metadata": {
+      "unitCode": {
+        "value": "GQ"
+      }
+    }
+  },
+  "SO2": {
+    "value": 1,
+    "type": "Integer",
+    "metadata": {
+      "unitCode": {
+        "value": "GQ"
+      }
+    }
+  },
+  "O3": {
+    "value": 47,
+    "type": "Integer",
+    "metadata": {
+      "unitCode": {
+        "value": "GQ"
+      }
+    }
+  },
+  "PM10": {
+    "value": 4,
+    "type": "Integer",
+    "metadata": {
+      "unitCode": {
+        "value": "GQ"
+      }
+    }
+  },
+  "PM2.5": {
+    "value": 2,
+    "type": "Integer",
+    "metadata": {
+      "unitCode": {
+        "value": "GQ"
+      }
+    }
+  }
+}

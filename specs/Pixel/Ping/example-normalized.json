@@ -1,0 +1,16 @@
+{
+    "id": "PingTest",
+    "type": "Ping",
+    "source": {
+        "value": "urn:pixel:DataSource:Ping",
+        "type": "Text"
+    },
+    "from": {
+        "value": "059501e23885-172.17.0.2",
+        "type": "Text"
+    },
+    "when": {
+        "value": "2021-01-08T18:21:40+02:00",
+        "type": "Text"
+    }
+}

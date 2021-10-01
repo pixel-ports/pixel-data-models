@@ -1,0 +1,62 @@
+{
+    "id": "FR_BAS:8300951:20198722",
+    "type": "VesselCall",
+    "dataProvider": {
+        "value": "provider",
+        "type": "Text"
+    },
+    "source": {
+        "value": "source",
+        "type": "Text"
+    },
+    "name": {
+        "value": "OLD%20WINE",
+        "type": "STRING_URL_ENCODED"
+    },
+    "location": {
+        "value": {
+            "type": "Point",
+            "coordinates": [
+                0.0,
+                0.0
+            ]
+        },
+        "type": "geo:json"
+    },
+    "IMO": {
+        "value": "8300951",
+        "type": "Text"
+    },
+    "journeyid": {
+        "value": 20198722,
+        "type": "Integer"
+    },
+    "scheduled_departure_dock": {
+        "value": "2018-01-04T21:55:00",
+        "type": "DateTime"
+    },
+    "loading_agent": {
+        "value": "SEAINVEST",
+        "type": "STRING_URL_ENCODED"
+    },
+    "loading_berth": {
+        "value": 75,
+        "type": "Integer"
+    },
+    "loading_dangerous": {
+        "value": false,
+        "type": "Boolean"
+    },
+    "loading_cargo_type": {
+        "value": "E.HUILE%20TOURNESOL",
+        "type": "STRING_URL_ENCODED"
+    },
+    "loading_cargo_fiscal_type": {
+        "value": "LIQ.V",
+        "type": "Text"
+    },
+    "loading_tonnage": {
+        "value": 2620,
+        "type": "Integer"
+    }
+}

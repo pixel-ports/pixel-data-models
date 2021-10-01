@@ -1,0 +1,41 @@
+{
+    "$id": "https://pixel-ports.eu/datamodels/dummies/DummiesMinimal.schema.json",
+    "$schema": "http://json-schema.org/schema#",
+    "title": "DummiesMinimalPattern",
+    "type": "object",
+    "properties": {
+      "id": {
+        "type": "string",
+        "description": "Unique identifier : urn:pixel:DummiesMinimal:id"
+      },
+      "type": {
+        "type": "string",
+        "enum": ["DummiesMinimalPattern"],
+        "description": "The type of the object"
+      },
+      "dataProvider": {
+        "type": "string",
+        "pattern": "^[\\w\\-\\.\\{\\}\\$\\+\\*\\[\\]`|~^@!,:\\\\]+$",
+        "description": "Specifies the URL to information about the provider of this information"
+      },
+      "source": {
+        "type": "string",
+        "description": "The urn of the PIXEL data source"
+      },
+      "dateModified": {
+        "type": "string",
+        "format": "date-time",
+        "description": "AUTO The date of the last modification - managed by ORION"
+      },
+      "dateCreated": {
+        "type": "string",
+        "format": "date-time",
+        "description": "AUTO The date of the creation of teh entity - managed by ORION"
+      },
+      "name": {
+        "type": "string",
+        "description": "The ship name"
+      }
+    },
+    "required": ["id", "type", "source"]
+  }

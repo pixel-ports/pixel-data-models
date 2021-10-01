@@ -1,0 +1,122 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://gitpixel.satrdlab.upv.es/marc.despland/DataModels/src/master/DataModels/marpolwaste.schema.json",
+  "title": "MarpolWaste",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier : urn:ngsi:MarpolWaste:imo:date"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "MarpolWaste"
+          ],
+          "description": "value is MarpolWaste"
+        },
+        "dataProvider": {
+          "type": "string",
+          "description": "Specifies the URL to information about the provider of this information"
+        },
+        "source": {
+          "type": "string",
+          "description": "The urn of the PIXEL data source"
+        },
+        "dateModified": {
+          "type": "string",
+          "format": "date-time",
+          "description": "AUTO The date of the last modification - managed by ORION"
+        },
+        "dateCreated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "AUTO The date of the creation of teh entity - managed by ORION"
+        },
+        "shipname": {
+          "type": "string",
+          "description": "Name of the ship"
+        },
+        "IMO": {
+          "type": "integer",
+          "description": "Ship identifier - according to the International Maritime Organization"
+        },
+        "estimatedArrivalTime": {
+          "type": "string",
+          "format": "date-time",
+          "description": "The Vessel ETA to the port call"
+        },
+        "location": {
+          "$ref": "http://geojson.org/schema/Geometry.json#",
+          "description": "The geo:json location of the data"
+        },
+        "marpolWasteType": {
+          "type": "integer",
+          "description": "Code of the waste type - DGITM, Charte sur la qualite des donneses portuaires, December 2017, Version 5.1"
+        },
+        "marpolWasteDescription": {
+          "type": "string",
+          "description": "Description of the waste based on the MARPOL code"
+        },
+        "amountOfWasteDelivered": {
+          "type": "integer",
+          "description": "Amount of waste to be delivered in cubic metres (MTQ UN/CEFACT)"
+        },
+        "maxDedicatedCapacity": {
+          "type": "integer",
+          "description": "Maximum dedicated storage capacity (MTQ UN/CEFACT)"
+        },
+        "amountRetainedOnBoard": {
+          "type": "integer",
+          "description": "Amount of waste retained on board (MTQ UN/CEFACT)"
+        },
+        "amountToBeGenerated": {
+          "type": "integer",
+          "description": "Estimated amount of waste to be generated between notification and next port of call (MTQ UN/CEFACT)"
+        },
+        "amountOfWasteDeliveredInLastPort": {
+          "type": "integer",
+          "description": "Amount of waste delivered in last port of call (MTQ UN/CEFACT)"
+        },
+        "portRemainingWaste": {
+          "type": "string",
+          "description": "Port at which remaining waste will be delivered (UNLOCODE)"
+        },
+        "portRemainingWasteDescription": {
+          "type": "string",
+          "description": "Additional typed-in port description (port at which remaining waste will be delivered)"
+        },
+        "wasteQuantifier": {
+          "type": "string",
+          "enum": [
+            "NONE",
+            "SOME",
+            "ALL"
+          ],
+          "description": "AUTO Part of the quantity delivered"
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type",
+    "dataProvider",
+    "source",
+    "location",
+    "shipname",
+    "IMO",
+    "estimatedArrivalTime",
+    "marpolWasteType",
+    "amountOfWasteDelivered",
+    "maxDedicatedCapacity",
+    "amountRetainedOnBoard",
+    "amountToBeGenerated",
+    "amountOfWasteDeliveredInLastPort"
+  ]
+}

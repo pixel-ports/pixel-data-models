@@ -1,0 +1,42 @@
+{
+    "id": "PVPrediction-GPMB",
+    "type": "PhotovoltaicMeasurement",
+    "source": {
+      "value": "urn:pixel:DataSource:Energy:PhotovoltaicMeasurement",
+      "type": "Text"
+    },
+    "dateObserved": {
+      "value": "2021-05-24T13:34:00",
+      "type": "DateTime"
+    },
+    "location": {
+      "value": {
+        "type": "Point",
+        "coordinates": [
+          44.903302,
+          -0.535252
+        ]
+      },
+      "type": "geo:json"
+    },
+    "dateObservedFrom": {
+      "value": "2021-05-24T13:34:00.346704+00:00",
+      "type": "DateTime"
+    },
+    "dateObservedTo": {
+      "value": "2021-05-24T14:34:00.346704+00:00",
+      "type": "DateTime"
+    },
+    "refPhotovoltaicDevice": {
+      "value": "",
+      "type": "Text"
+    },
+    "temperature": {
+      "value": "",
+      "type": "Text"
+    },
+    "nominalPeakPowerGeneration": {
+      "value": 2574582.7083333335,
+      "type": "Float"
+    }
+  }

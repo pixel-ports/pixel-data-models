@@ -1,0 +1,93 @@
+{
+    "$id": "https://gitpixel.satrdlab.upv.es/marc.despland/DataModels/src/master/DataModels/marpolterminalwaste.schema.json",
+    "$schema": "http://json-schema.org/schema#",
+    "title": "MarpolTerminalWaste",
+    "type": "object",
+    "allOf": [
+      {
+        "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+      },
+      {
+        "properties": {
+          "id": {
+            "type": "string",
+            "description": "Unique identifier : urn:ngsi:MarpolTerminalWaste:locode:date"
+          },
+          "type": {
+            "type": "string",
+            "enum": [
+              "MarpolTerminalWaste"
+            ],
+            "description": "value is MarpolTerminalWaste"
+          },
+          "dataProvider": {
+            "type": "string",
+            "description": "Specifies the URL to information about the provider of this information"
+          },
+          "source": {
+            "type": "string",
+            "description": "The urn of the PIXEL data source"
+          },
+          "dateModified": {
+            "type": "string",
+            "format": "date-time",
+            "description": "AUTO The date of the last modification - managed by ORION"
+          },
+          "dateCreated": {
+            "type": "string",
+            "format": "date-time",
+            "description": "AUTO The date of the creation of teh entity - managed by ORION"
+          },
+          "locode": {
+            "type": "string",
+            "description": "the terminal locode (United Nations / Code for Trade and Transport Locations)"
+          },
+          "dateObservedFrom": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Observation period start date and time"
+          },
+          "dateObservedTo": {
+            "type": "string",
+            "format": "date-time",
+            "description": "Observation period end date and time"
+          },                    
+          "location": {
+            "$ref": "http://geojson.org/schema/Geometry.json#",
+            "description": "The geo:json location of the data"
+          },
+          "domesticWaste": {
+            "type": "number",
+            "description": "Amount of domestic waste in tons"            
+          },          
+          "recyclableWaste": {
+            "type": "number",
+            "description": "Amount of recyclable waste in tons"            
+          },          
+          "hazardousWaste": {
+            "type": "number",
+            "description": "Amount of hazardous waste in tons"            
+          },          
+          "totalWaste": {
+            "type": "number",
+            "description": "Total amount of waste in tons"            
+          }          
+        }
+      }
+    ],
+    "required": [
+      "id",
+      "type",
+      "dataProvider",
+      "source",
+      "locode",
+      "dateObservedFrom",
+      "dateObservedTo",
+      "location",
+      "domesticWaste",
+      "recyclableWaste",
+      "hazardousWaste",
+      "totalWaste"
+    ]
+  }
+  

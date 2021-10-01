@@ -1,0 +1,19 @@
+{
+        "id": "urn:ngsi:WeatherObserved:HOPac67b2ce52b6",
+        "type": "WeatherObserved",
+        "dataProvider": "www.hopu.eu",
+        "dateObserved": "2021-06-28T16:57:05Z/2021-06-28T17:02:05Z",
+        "dateObservedFrom": "2021-06-28T16:57:05.00Z",
+        "dateObservedTo": "2021-06-28T17:02:05.00Z",
+        "illuminance": 0,
+        "illuminanceMax": 0.2,
+        "illuminanceMin": 0,
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                0,
+                0
+            ]
+        },
+        "source": "urn:pixel:DataSource:Hopu:WeatherObserved"
+}

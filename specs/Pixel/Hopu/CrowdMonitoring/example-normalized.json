@@ -1,0 +1,42 @@
+{
+  "id": "Hopu:224f33c478ab:CrowdMonitoring:2021-05-18T12:48:32Z",
+  "type": "CrowdMonitoring",
+  "source": {
+    "type": "Text",
+    "value": "urn:pixel:DataSource:frbod:HopuSmartSpot"
+  },
+  "dataProvider": {
+    "type": "Text",
+    "value": "MQTT"
+  },
+  "location": {
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        -0.531995,
+        44.886173
+      ]
+    },
+    "type": "geo:json"
+  },
+  "refDevice": {
+    "value": "Hopu-device-224f33c478ab-Bordeaux_PM1",
+    "type": "Text"
+  },
+  "dateReceived": {
+    "value": "2021-05-18T12:48:32Z",
+    "type": "DateTime"
+  },
+  "devicesCountLowInterval": {
+    "value": 33,
+    "type": "Number"
+  },
+  "devicesCountMediumInterval": {
+    "value": 68,
+    "type": "Number"
+  },
+  "devicesCountHighInterval": {
+    "value": 137,
+    "type": "Number"
+  }
+}

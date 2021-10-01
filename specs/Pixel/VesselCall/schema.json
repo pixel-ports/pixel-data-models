@@ -1,0 +1,227 @@
+{
+  "$id": "https://gitpixel.satrdlab.upv.es/marc.despland/DataModels/src/master/DataModels/vesselcall.schema.json",
+  "$schema": "http://json-schema.org/schema#",
+  "title": "VesselCall",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "id": {
+          "type": "string",
+          "description": "Unique identifier : urn:ngsi:VesselCall:IMO:JourneyId"
+        },
+        "type": {
+          "type": "string",
+          "enum": [
+            "VesselCall"
+          ],
+          "description": "value is VesselCall"
+        },
+        "dataProvider": {
+          "type": "string",
+          "description": "Specifies the URL to information about the provider of this information"
+        },
+        "source": {
+          "type": "string",
+          "description": "The ID of the PIXEL data source"
+        },
+        "dateModified": {
+          "type": "string",
+          "format": "date-time",
+          "description": "AUTO The date of the last modification - managed by ORION"
+        },
+        "dateCreated": {
+          "type": "string",
+          "format": "date-time",
+          "description": "AUTO The date of the creation of teh entity - managed by ORION"
+        },
+        "name": {
+          "type": "string",
+          "description": "The ship name"
+        },
+        "location": {
+          "$ref": "http://geojson.org/schema/Geometry.json#",
+          "description": "The geo:json location of the data"
+        },
+        "IMO": {
+          "type": "string",
+          "description": "Ship international identification"
+        },
+        "MMSI": {
+          "type": "string",
+          "description": "ANFR Ship identification"
+        },
+        "journeyid": {
+          "type": "integer",
+          "description": " identify the rotation of the boat to detect different vessel CAL from the same ship and same day"
+        },
+        "company": {
+          "type": "string",
+          "description": "Ship Company name"
+        },
+        "unlocode": {
+          "type": "string",
+          "description": "https://www.unece.org/cefact/locode/service/location.html"
+        },
+        "arrival_port_area": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ship arrives at port area"
+        },
+        "arrival_dock": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ship on dock"
+        },
+        "scheduled_arrival_dock": {
+          "type": "string",
+          "format": "date-time",
+          "description": "scheduled date for ship on dock"
+        },
+        "departure_dock": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ship leaves dock"
+        },
+        "scheduled_departure_dock": {
+          "type": "string",
+          "format": "date-time",
+          "description": "scheduled date for ship leaves dock"
+        },
+        "departure_port_area": {
+          "type": "string",
+          "format": "date-time",
+          "description": "ship leaves port area"
+        },
+        "unloading_berth": {
+          "type": "string",
+          "description": "The dock identifier to unload the cargo"
+        },
+        "unloading_agent": {
+          "type": "string",
+          "description": "The agent name in charge loading the cargo"
+        },
+        "unloading_dangerous": {
+          "type": "boolean",
+          "description": "Is it a dangerous cargo to unloading"
+        },
+        "unloading_cargo_type": {
+          "type": "string",
+          "description": "Cargo description or PASSENGERS"
+        },
+        "unloading_cargo_fiscal_type": {
+          "type": "string",
+          "description": "Cargo Fiscal type, Only for French port "
+        },
+        "unloading_tonnage": {
+          "type": "number",
+          "description": "the weight of the cargo, in tons"
+        },
+        "unloading_full_containers": {
+          "type": "string",
+          "description": "the number of full container"
+        },
+        "unloading_empty_containers": {
+          "type": "string",
+          "description": "the number of empty container"
+        },
+        "loading_berth": {
+          "type": "string",
+          "description": "The dock identifier to load the cargo"
+        },
+        "loading_agent": {
+          "type": "string",
+          "description": "The agent name in charge loading the cargo"
+        },
+        "loading_dangerous": {
+          "type": "boolean",
+          "description": "Is it a dangerous cargo to loading"
+        },
+        "loading_cargo_type": {
+          "type": "string",
+          "description": "Cargo description or PASSENGERS"
+        },
+        "loading_cargo_fiscal_type": {
+          "type": "string",
+          "description": "Cargo Fiscal type, Only for French port ?"
+        },
+        "loading_tonnage": {
+          "type": "number",
+          "description": "the weight of the cargo, in tons"
+        },
+        "loading_full_containers": {
+          "type": "string",
+          "description": "the number of full container"
+        },
+        "loading_empty_containers": {
+          "type": "string",
+          "description": "the number of empty container"
+        },
+        "capacity": {
+          "type": "number",
+          "description": "the weight of the cargo in tons or the capacity of passengers"
+        },
+        "passengers_to_arrive": {
+          "type": "number",
+          "description": "the number of passengers that arrive with the ship and leave it here"
+        },
+        "passengers_to_depart": {
+          "type": "number",
+          "description": "the number of passengers that start they journey here"
+        },
+        "transit_passengers": {
+          "type": "string",
+          "description": "the number of passengers that arrive with the ship and leave with it"
+        },
+        "transit_passengers_arrive": {
+          "type": "integer",
+          "description": "the number of passengers that arrive with the ship"
+        },
+        "transit_passengers_depart": {
+          "type": "integer",
+          "description": "the number of passengers that leave the ship"
+        },
+        "total_passengers_arrived": {
+          "type": "integer",
+          "description": "total of passengers arrived"
+        },
+        "total_departured_passengers": {
+          "type": "integer",
+          "description": "total of passengers departured"
+        },
+        "arrival_ratio": {
+          "type": "integer",
+          "description": ""
+        },
+        "departure_ratio": {
+          "type": "integer",
+          "description": ""
+        },
+        "home_port_flag": {
+          "type": "string",
+          "description": ""
+        },
+        "buses": {
+          "type": "number",
+          "description": "number of buses needed"
+        },
+        "ship_type": {
+          "type": "string",
+          "description": "Type of ship"
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type",
+    "dataProvider",
+    "source",
+    "location",
+    "IMO",
+    "journeyid"
+  ]
+}

@@ -1,0 +1,94 @@
+ {
+        "id": "urn:ngsi:WeatherObserved:HOPac67b2ce52b6",
+        "type": "WeatherObserved",
+        "dataProvider": {
+            "type": "Text",
+            "value": "www.hopu.eu",
+            "metadata": {}
+        },
+        "dateObserved": {
+            "type": "Text",
+            "value": "2021-06-28T12:20:29Z/2021-06-28T12:25:29Z",
+            "metadata": {}
+        },
+        "dateObservedFrom": {
+            "type": "DateTime",
+            "value": "2021-06-28T12:20:29.00Z",
+            "metadata": {}
+        },
+        "dateObservedTo": {
+            "type": "DateTime",
+            "value": "2021-06-28T12:25:29.00Z",
+            "metadata": {}
+        },
+        "illuminance": {
+            "type": "Number",
+            "value": 0.0099999,
+            "metadata": {
+                "dateObserved": {
+                    "type": "DateTime",
+                    "value": "2021-06-28T12:20:29.00Z"
+                },
+                "description": {
+                    "type": "Text",
+                    "value": "Illuminance observed measured in lux"
+                },
+                "unit": {
+                    "type": "Text",
+                    "value": "lux"
+                }
+            }
+        },
+        "illuminanceMax": {
+            "type": "Number",
+            "value": 0.2,
+            "metadata": {
+                "dateObserved": {
+                    "type": "DateTime",
+                    "value": "2021-06-28T03:05:07.00Z"
+                },
+                "description": {
+                    "type": "Text",
+                    "value": "The maximum illuminance value measured by the sensor since it is ON"
+                },
+                "unit": {
+                    "type": "Text",
+                    "value": "lux"
+                }
+            }
+        },
+        "illuminanceMin": {
+            "type": "Number",
+            "value": 0,
+            "metadata": {
+                "dateObserved": {
+                    "type": "DateTime",
+                    "value": "2021-06-28T03:05:07.00Z"
+                },
+                "description": {
+                    "type": "Text",
+                    "value": "The minimum illuminance value measured by the sensor since it is ON"
+                },
+                "unit": {
+                    "type": "Text",
+                    "value": "lux"
+                }
+            }
+        },
+        "location": {
+            "type": "geo:json",
+            "value": {
+                "type": "Point",
+                "coordinates": [
+                    0,
+                    0
+                ]
+            },
+            "metadata": {}
+        },
+        "source": {
+            "type": "Text",
+            "value": "urn:pixel:DataSource:Hopu:WeatherObserved",
+            "metadata": {}
+        }
+}

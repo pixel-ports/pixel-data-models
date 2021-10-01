@@ -1,0 +1,88 @@
+{
+    "id": "GPMB-MarpolWaste-9734848-2019-01-01T19:00:00",
+    "type": "MarpolWaste",
+    "source": "urn:pixel:DataSource:frbod:VIGIEsip",
+    "dataProvider": {
+      "value": "vigiesip_d_dechets_2019.csv",
+      "type": "Text"
+    },
+    "location": {
+      "value": {
+        "type": "Point",
+        "coordinates": [
+          -0.516238,
+          44.899835
+        ]
+      },
+      "type": "geo:json"
+    },
+    "shipname": {
+      "value": "YARA%20NAUMA",
+      "type": "STRING_URL_ENCODED"
+    },
+    "IMO": {
+      "value": 9734848,
+      "type": "Integer"
+    },
+    "estimatedArrivalTime": {
+      "value": "2019-01-01T19:00:00",
+      "type": "DateTime"
+    },
+    "marpolWasteType": {
+      "value": 2300,
+      "type": "Integer"
+    },
+    "marpolWasteDescription": {
+      "value": "Other%20domestic%20wastes",
+      "type": "STRING_URL_ENCODED"
+    },
+    "amountOfWasteDelivered": {
+      "value": 0,
+      "type": "Integer",
+      "metadata": {
+        "unitCode": {
+          "value": "MTQ"
+        }
+      }
+    },
+    "maxDedicatedCapacity": {
+      "value": 100,
+      "type": "Integer",
+      "metadata": {
+        "unitCode": {
+          "value": "MTQ"
+        }
+      }
+    },
+    "amountRetainedOnBoard": {
+      "value": 0,
+      "type": "Integer",
+      "metadata": {
+        "unitCode": {
+          "value": "MTQ"
+        }
+      }
+    },
+    "amountToBeGenerated": {
+      "value": 0,
+      "type": "Integer",
+      "metadata": {
+        "unitCode": {
+          "value": "MTQ"
+        }
+      }
+    },
+    "amountOfWasteDeliveredInLastPort": {
+      "value": 0,
+      "type": "Integer",
+      "metadata": {
+        "unitCode": {
+          "value": "MTQ"
+        }
+      }
+    },
+    "wasteQuantifier": {
+      "value": "NONE",
+      "type": "Text"
+    }
+  }

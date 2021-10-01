@@ -1,0 +1,114 @@
+{
+   "$schema": "http://json-schema.org/schema#",
+   "$id": "https://gitpixel.satrdlab.upv.es/marc.despland/DataModels/src/master/DataModels/weatherobservedsencrop.schema.json",
+   "title": "GSMA / FIWARE - Weather Observed schema extended for Sencrop data",
+   "description": "An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.",
+   "type": "object",
+   "allOf": [
+      {
+         "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+       },
+      {
+         "$ref": "https://fiware.github.io/data-models/specs/Weather/weather-schema.json#/definitions/Weather-Commons"
+      },
+      {
+         "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+       },
+      {
+         "properties": {
+            "type": {
+               "type": "string",
+               "enum": [
+                  "WeatherObservedSencrop"
+               ],
+               "description": "NGSI Entity type"
+            },
+            "dateObserved": {
+               "type": "string",
+               "format": "date-time"
+            },
+            "precipitation": {
+               "type": "number",
+               "minimum": 0
+            },
+            "atmosphericPressure": {
+               "type": "number",
+               "minimum": 0
+            },
+            "solarRadiation": {
+               "type": "number",
+               "minimum": 0
+            },
+            "illuminance": {
+               "type": "number",
+               "minimum": 0
+            },
+            "pressureTendency": {
+               "oneOf": [
+                  {
+                     "type": "string",
+                     "enum": [
+                        "raising",
+                        "falling",
+                        "steady"
+                     ]
+                  },
+                  {
+                     "type": "number"
+                  }
+               ]
+            },
+            "location": {
+               "$ref": "http://geojson.org/schema/Geometry.json#",
+               "description": "The geo:json location of the data"
+            },
+            "dewPoint": {
+               "type": "number"
+            },
+            "refDevice": {
+               "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+            },
+            "streamGauge": {
+               "type": "number"
+            },
+            "snowHeight": {
+               "type": "number"
+            },
+            "precipIntensity": {
+               "type": "number",
+               "minimum": 0
+            },
+            "precipProbability": {
+               "type": "number",
+               "minimum": 0
+            },
+            "temperature": {
+               "type": "number"
+            },
+            "windSpeed": {
+               "type": "number"
+            },
+            "humidity": {
+               "type": "number"
+            },
+            "pressure": {
+               "type": "number"
+            },
+            "windGust": {
+               "type": "number",
+               "description": "Brief increase in the speed of the wind (m/s)"
+            },
+            "wetBulbTemperature": {
+               "type": "number",
+               "description": "WBT is the temperature read by a thermometer covered in water-soaked cloth (wet-bulb thermometer) over which air is passed (Degrees centigrades)"
+            }
+         }
+      }
+   ],
+   "required": [
+      "id",
+      "type",
+      "dateObserved",
+      "location"
+   ]
+}

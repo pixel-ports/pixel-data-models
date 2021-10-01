@@ -1,0 +1,134 @@
+{
+   "$schema": "http://json-schema.org/schema#",
+  "$id": "https://gitpixel.satrdlab.upv.es/marc.despland/DataModels/src/master/DataModels/Pixel/Hopu/WeatherObserved/schema.json",
+  "title": "FIWARE - Weather / WeatherObserved  HOPU data model for the purpose of PIXEL project",
+   "description": "An observation of weather conditions at a certain place and time. This data model has been developed in cooperation with mobile operators and the GSMA.",
+   "type": "object",
+   "allOf": [
+      {
+         "$ref": "https://fiware.github.io/data-models/specs/Weather/weather-schema.json#/definitions/Weather-Commons"
+      },
+      {
+         "properties": {
+            "type": {
+               "type": "string",
+               "enum": [
+                  "WeatherObserved"
+               ],
+               "description": "NGSI Entity type"
+            },
+            "source": {
+	      		"type": "string",
+	      		"description": "The ID of the PIXEL data source"
+	    	},
+			"dataProvider": {
+	      		"type": "string",
+	      		"description": "Data Provider"
+	    	},
+	    	"operationalStatus": {
+               "type": "string"
+            },
+             "TimeInstant": {
+	          "type": "string",
+	          "format": "date-time"
+	        },
+	    	"dataProvider": {
+	      		"type": "string",
+	      		"description": "Data Provider"
+	    	},
+            "dateObserved": {
+               "type": "string"
+            },
+	        "dateObservedFrom": {
+	          "type": "string",
+	          "format": "date-time"
+	        },
+	        "dateObservedTo": {
+	          "type": "string",
+	          "format": "date-time"
+	        },            
+            "precipitation": {
+               "type": "number",
+               "minimum": 0
+            },
+            "atmosphericPressure": {
+               "type": "number",
+               "minimum": 0
+            },
+            "solarRadiation": {
+               "type": "number",
+               "minimum": 0
+            },
+            "illuminance": {
+               "type": "number",
+               "minimum": 0
+            },
+            "illuminanceMax": {
+               "type": "number",
+               "minimum": 0
+            },
+            "illuminanceMin": {
+               "type": "number",
+               "minimum": 0
+            },                        
+            "pressureTendency": {
+               "oneOf": [
+                  {
+                     "type": "string",
+                     "enum": [
+                        "raising",
+                        "falling",
+                        "steady"
+                     ]
+                  },
+                  {
+                     "type": "number"
+                  }
+               ]
+            },
+            "location": {
+               "$ref": "http://geojson.org/schema/Geometry.json#",
+               "description": "The geo:json location of the data"
+            },
+            "dewPoint": {
+               "type": "number"
+            },
+            "refDevice": {
+               "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+            },
+            "streamGauge": {
+               "type": "number"
+            },
+            "snowHeight": {
+               "type": "number"
+            },
+            "precipIntensity": {
+               "type": "number",
+               "minimum": 0
+            },
+            "precipProbability": {
+               "type": "number",
+               "minimum": 0
+            },
+            "temperature": {
+               "type": "number"
+            },
+            "windSpeed": {
+               "type": "number"
+            },
+            "humidity": {
+               "type": "number"
+            },
+            "pressure": {
+               "type": "number"
+            }
+         }
+      }
+   ],
+   "required": [
+      "id",
+      "type",
+      "dateObserved",
+      "location"
+   ]
+}

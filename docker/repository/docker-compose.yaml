@@ -1,0 +1,18 @@
+version: '3.3'
+services:
+  datarepo:
+    build:
+      context: ./datarepo
+    image: datarepo:latest
+    restart: always
+    container_name: datarepo
+    hostname: datarepo
+    logging:
+      options:
+        max-size: "15m"
+        max-file: "2"
+    ports:
+      - 80:80
+    networks:
+      ih:
+        ipv4_address: 172.24.1.30

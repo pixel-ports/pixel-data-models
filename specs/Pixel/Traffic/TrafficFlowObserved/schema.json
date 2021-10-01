@@ -1,0 +1,103 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://gitpixel.satrdlab.upv.es/marc.despland/DataModels/src/master/DataModels/Pixel/Traffic/TrafficFlowObserved/schema.json",
+  "title": "Reduction of the FIWARE - Transportation / TrafficFlowObserved  data model for the purpose of PIXEL project",
+  "description": "TrafficFlowObserved",
+  "type": "object",
+  "allOf": [
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "TrafficFlowObserved"
+          ],
+          "description": "NGSI Entity type"
+        },
+        "source": {
+      		"type": "string",
+      		"description": "The ID of the PIXEL data source"
+    	},
+        "laneId": {
+          "type": "string",
+          "enum": [
+            "Point",
+            "Line"
+          ]
+        },
+        "location": {
+          "$ref": "http://geojson.org/schema/Geometry.json#"
+        },
+		"address": {
+          "type": "object",
+          "properties": {
+            "streetAddress": {
+              "type": "string"
+            },
+            "addressLocality": {
+              "type": "string"
+            },
+            "addressRegion": {
+              "type": "string"
+            },
+            "addressCountry": {
+              "type": "string"
+            },
+            "postalCode": {
+              "type": "string"
+            },
+            "postOfficeBoxNumber": {
+              "type": "string"
+            },
+            "areaServed": {
+              "type": "string"
+            }
+          }
+        },
+        "dateObservedFrom": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dateObserved": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dateObservedTo": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "intensity": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Volume (number of vehicles) of traffic in a point/lane in a timespan"
+        },
+        "averageVehicleSpeed": {
+          "type": "number",
+          "minimum": 0,
+          "description": "Average speed of the vehicles in a point/lane in a timespan"
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type",
+    "source",
+    "dateObservedFrom",
+    "dateObservedTo",		
+    "laneId",
+    "location"
+  ],
+  "anyOf": [
+    {
+      "required": [
+        "intensity"
+      ]
+    },
+    {
+      "required": [
+        "averageVehicleSpeed"
+      ]
+    }
+  ]
+}

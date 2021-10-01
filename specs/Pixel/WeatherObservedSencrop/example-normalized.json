@@ -1,0 +1,42 @@
+{
+  "id": "GPMB-WeatherObserved-Sencrop-20430-2020-09-24T18:29:24.000Z",
+  "type": "WeatherObservedSencrop",
+  "dataProvider": {
+    "value": "https://app.sencrop.com",
+    "type": "URL"
+  },
+  "address": {
+    "value": "Grand Port Maritime de Bordeaux\nCapitainerie du Port\nZone Portuaire\nQuai Carriet\n33310 LORMONT",
+    "type": "PostalAddress"
+  },
+  "location": {
+    "value": {
+      "type": "Point",
+      "coordinates": [
+        0.32,
+        44.54
+      ]
+    },
+    "type": "geo:json"
+  },
+  "refDevice": {
+    "value": "device-sencrop-GPMB-20430",
+    "type": "Text"
+  },
+  "dateObserved": {
+    "value": "2020-09-24T18:29:24.000Z",
+    "type": "DateTime"
+  },
+  "windSpeed": {
+    "value": 0,
+    "type": "Float"
+  },
+  "windGust": {
+    "value": 0,
+    "type": "Float"
+  },
+  "windDirection": {
+    "value": 0,
+    "type": "Float"
+  }
+}

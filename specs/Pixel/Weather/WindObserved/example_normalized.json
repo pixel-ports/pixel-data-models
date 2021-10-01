@@ -1,0 +1,21 @@
+{
+    "id": "WindObservedPIXEL-THPA-Crane",
+    "type": "WindObserved",
+    "dateObserved":  "2020-02-18T16:48:23",           
+    "location": {        
+            "type": "Point",
+            "coordinates": [22.906200, 40.635661]        
+    },
+    "stationName": "Thessaloniki",            
+    "stationCode": "port-Gantry Crane 3", 
+    "dataProvider": "THPA",     
+    "windSpeed": 4.2,
+    "windSpeedAverage": 3.5,
+    "windSpeedMax": 259,
+    "windTimeFrame": 10,
+    "windDirection": 205,
+    "windDirectionAverage": 200,
+    "windDirectionMax":250
+        
+
+}

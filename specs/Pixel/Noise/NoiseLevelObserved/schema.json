@@ -1,0 +1,155 @@
+{
+  "$schema": "http://json-schema.org/schema#",
+  "$id": "https://fiware.github.io/data-models/specs/Environment/NoiseLevelObserved/schema.json",
+  "title": "GSMA / FIWARE - Noise Level observed schema",
+  "description": "An observation of those acoustic parameters that estimate noise pressure levels at a certain place and time. ",
+  "type": "object",
+  "allOf": [
+    {
+      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/GSMA-Commons"
+    },
+    {
+      "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/Location-Commons"
+    },
+    {
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": [
+            "NoiseLevelObserved"
+          ],
+          "description": "NGSI Entity type"
+        },
+        "dateObserved": {
+          "type": "string"
+        },
+        "dateObservedFrom": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "dateObservedTo": {
+          "type": "string",
+          "format": "date-time"
+        },
+        "sonometerClass": {
+          "type": "string",
+          "enum": [
+            "0",
+            "1",
+            "2"
+          ]
+        },
+        "frequencies": {
+          "properties": {
+            "100": {
+              "type": "number"
+            },
+            "125": {
+              "type": "number"
+            },
+            "160": {
+              "type": "number"
+            },
+            "200": {
+              "type": "number"
+            },
+            "250": {
+              "type": "number"
+            },
+            "315": {
+              "type": "number"
+            },
+            "400": {
+              "type": "number"
+            },
+            "500": {
+              "type": "number"
+            },
+            "630": {
+              "type": "number"
+            },
+            "800": {
+              "type": "number"
+            },
+            "1000": {
+              "type": "number"
+            },
+            "1250": {
+              "type": "number"
+            },
+            "1600": {
+              "type": "number"
+            },
+            "2000": {
+              "type": "number"
+            },
+            "2500": {
+              "type": "number"
+            },
+            "3150": {
+              "type": "number"
+            },
+            "4000": {
+              "type": "number"
+            },
+            "8000": {
+              "type": "number"
+            },
+            "10000": {
+              "type": "number"
+            }
+          },
+          "type": "object",
+          "required": []
+        },
+        "refDevice": {
+          "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+        },
+        "refPointOfInterest": {
+          "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+        },
+        "refWeatherObserved": {
+          "$ref": "https://fiware.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+        },
+        "location": {
+          "$ref": "http://geojson.org/schema/Geometry.json#",
+          "description": "The geo:json location of the data"
+        },
+        "Leq": {
+          "type": "number"
+        },
+        "Lmax": {
+          "type": "number"
+        },
+        "Lmin": {
+          "type": "number"
+        },
+        "L10": {
+          "type": "number"
+        },
+        "L50": {
+          "type": "number"
+        },
+        "L90": {
+          "type": "number"
+        },
+        "L95": {
+          "type": "number"
+        },
+        "L99": {
+          "type": "number"
+        },
+        "Lsel": {
+          "type": "number"
+        }
+      }
+    }
+  ],
+  "required": [
+    "id",
+    "type",
+    "dateObservedFrom",
+    "dateObservedTo",
+    "location"
+  ]
+}

@@ -1,0 +1,54 @@
+{
+        "id": "urn:ngsi:NoiseLevelObserved:HOPac67b2ce52b6",
+        "type": "NoiseLevelObserved",
+        "LA1": 76.5999984,
+        "LA10": 68,
+        "LA50": 57.7291679,
+        "LA90": 52.6025657,
+        "LA99": 52.2411766,
+        "LAFmax": 78.4767761,
+        "LAFmin": 44.0815582,
+        "LASmax": 72.4714508,
+        "LASmin": 52.2299499,
+        "LAeq": 61.8837509,
+        "LAmax": 76.5999984,
+        "LAmin": 47.880001,
+        "TimeInstant": "2021-06-28T10:35:03Z",
+        "dataProvider": "www.hopu.eu",
+        "dateObserved": "2021-06-28T10:35:03Z/2021-06-28T10:40:03Z",
+        "dateObservedFrom": "2021-06-28T10:35:03.00Z",
+        "dateObservedTo": "2021-06-28T10:40:03.00Z",
+        "frequencies": {
+            "100": 40,
+            "125": 40,
+            "160": 40,
+            "200": 40,
+            "250": 40,
+            "315": 40,
+            "400": 40,
+            "500": 40,
+            "630": 40,
+            "800": 40,
+            "1000": 40,
+            "1250": 40,
+            "1600": 40,
+            "2000": 40,
+            "2500": 40,
+            "3150": 40,
+            "4000": 40,
+            "8000": 40,
+            "10000": 40
+        },
+        "location": {
+            "type": "Point",
+            "coordinates": [
+                0,
+                0
+            ]
+        },
+        "operationalStatus": "CONNECTED",
+        "refDevice": "urn:ngsi:Device:HOPac67b2ce52b6",
+        "sonometerClass": "2",
+        "source": "urn:pixel:DataSource:Hopu:NoiseLevelObserved"
+
+}

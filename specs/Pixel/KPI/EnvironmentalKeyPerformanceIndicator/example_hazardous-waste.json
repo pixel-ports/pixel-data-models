@@ -1,0 +1,31 @@
+{
+   "id":"ekpi-hazardous-waste-terminal",
+   "type":"EnvironmentalKeyPerformanceIndicator",
+   "name":"Hazardous waste",
+   "description":"Hazardous waste terminal/Port Authority",
+   "category":[
+      "quantitative"
+   ],
+   "organization":{
+      "name":"THPA"
+   },
+   "process":"waste management document of the terminal/PA served through API",
+   "calculationFrequency":"yearly",
+   "calculationMethod":"automatic",
+   "dateObservedFrom":"2019-01-01T00:00:00.00Z",
+   "dateObservedTo":"2019-12-31T00:00:00.00Z",  
+   "kpiValue":1.2122160090720682E-4,
+   "dateNextCalculation":"2019-02-28T00:00:00.00Z",
+   "dateModified":"2019-01-31T00:00:00.00Z",
+   "source":"ekpi-input",
+   "peicategory":"Waste",
+   "peilevel":"Indicator",
+   "sourcePort":"TE",
+   "unit":"kg/ton",
+   "dataPieces":[
+      {
+         "name":"Waste produced by the terminals",
+         "retrievalWay":"periodicAPI"
+      }
+   ]
+}
